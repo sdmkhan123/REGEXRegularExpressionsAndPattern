@@ -82,5 +82,23 @@ namespace REGEXRegularExpressionsAndPattern
                 Console.WriteLine("Mobile Number of the user is : Invalid");
             }
         }
+        /// <summary>
+        /// Function to check Password is valid or not
+        /// </summary>
+        public static void validPassword()
+        {
+            Console.WriteLine("\n***************************************************************************\n");
+            string passwordPattern = @"^[0-9a-zA-Z]{8,}$";
+            Console.Write("Enter the Password : ");
+            string password = Console.ReadLine();
+            if (Regex.IsMatch(password, passwordPattern))
+            {
+                Console.WriteLine("Password of the user is : Valid");
+            }
+            else
+            {
+                Console.WriteLine("Password of the user is : Invalid");
+            }
+        }
     }
 }
