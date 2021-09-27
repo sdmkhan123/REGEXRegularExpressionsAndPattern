@@ -92,7 +92,7 @@ namespace REGEXRegularExpressionsAndPattern
             string password = Console.ReadLine();
             string passpattern = @"^[0-9a-zA-Z]{8,}$";
             Regex reg = new Regex(passpattern);
-            if (password.Length >= 8 && toCheckNumOfUpperCase(password) >= 1 && ToCheckNumeric(password) >= 1)
+            if (password.Length >= 8 && toCheckNumOfUpperCase(password) >= 1 && ToCheckNumeric(password) >= 1 && toCheckSpecialChar(password) == 1)
             {
                 Console.WriteLine("Password of the user is : Valid");
             }
@@ -130,6 +130,23 @@ namespace REGEXRegularExpressionsAndPattern
             foreach (char ch in pass)
             {
                 if (char.IsDigit(ch))
+                {
+                    num++;
+                }
+            }
+            return num;
+        }
+         /// <summary>
+        /// To chech exactly one special char
+        /// </summary>
+        /// <param name="pass"></param>
+        /// <returns></returns>
+        private int toCheckSpecialChar(string pass)
+        {
+            int num = 0;
+            foreach (char ch in pass)
+            {
+                if (ch == '!' || ch == '@' || ch == '#' || ch == '$' || ch == '%' || ch == '^' || ch == '&' || ch == '*' || ch == '(' || ch == ')' || ch == '?' || ch == '.')
                 {
                     num++;
                 }
