@@ -87,6 +87,7 @@ namespace REGEXRegularExpressionsAndPattern
         /// </summary>
         public void validPassword()
         {
+            Console.WriteLine("\n***************************************************************************\n");
             Console.Write("Enter the Password : ");
             string password = Console.ReadLine();
             string passpattern = @"^[0-9a-zA-Z]{8,}$";
