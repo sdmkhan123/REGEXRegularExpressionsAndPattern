@@ -88,7 +88,7 @@ namespace REGEXRegularExpressionsAndPattern
         public static void validPassword()
         {
             Console.WriteLine("\n***************************************************************************\n");
-            string passwordPattern = @"^[0-9a-zA-Z]*[A-Z][0-9a-zA-Z][0-9a-zA-Z]{7,}$";
+            string passwordPattern = @"^[A-Z]{1,}[0-9]{1,}[A-Za-z]{6,}$";
             Console.Write("Enter the Password : ");
             string password = Console.ReadLine();
             if (Regex.IsMatch(password, passwordPattern))
