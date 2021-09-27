@@ -47,7 +47,7 @@ namespace REGEXRegularExpressionsAndPattern
             }
         }
         /// <summary>
-        ///  Function to check Last name is valid or not
+        ///  Function to check Email-Id is valid or not
         /// </summary>
         public static void validEmailID()
         {
