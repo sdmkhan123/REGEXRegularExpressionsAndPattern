@@ -13,6 +13,7 @@ namespace REGEXRegularExpressionsAndPattern
             ToCheckRegexPattern.validFirstName();
             ToCheckRegexPattern.validLastName();
             ToCheckRegexPattern.validEmailID();
+            ToCheckRegexPattern.validMobileNumber();
             Console.WriteLine("\n***************************************************************************\n");
         }
     }

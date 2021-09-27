@@ -64,5 +64,23 @@ namespace REGEXRegularExpressionsAndPattern
                 Console.WriteLine("Email-Id of the user is : Invalid");
             }
         }
+        /// <summary>
+        /// Function to check Mobile Number is valid or not
+        /// </summary>
+        public static void validMobileNumber()
+        {
+            Console.WriteLine("\n***************************************************************************\n");
+            string mobileNumberdPattern = "^[9][1][ ][6-9][0-9]{9}$";
+            Console.Write("Enter the Mobile Number : ");
+            string mobileNumber = Console.ReadLine();
+            if (Regex.IsMatch(mobileNumber, mobileNumberdPattern))
+            {
+                Console.WriteLine("Mobile Number of the user is : Valid");
+            }
+            else
+            {
+                Console.WriteLine("Mobile Number of the user is : Invalid");
+            }
+        }
     }
 }
