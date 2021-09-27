@@ -12,11 +12,21 @@ namespace REGEXRegularExpressionsAndPattern
         /// Function to check name is valid or not
         /// </summary>
         /// <param name="fName"></param>
-        public static bool validName(string name)
+        public static void validName()
         {
-            string namePattern = @"^[A-Z]{1}[a-z]{3,}";
-            //if name pattern is match
-            return (Regex.IsMatch(name, namePattern));
+            string fNamePattern = @"^[A-Z]{1}[a-z]{3,}";
+            Console.Write("Enter the Frist-Name : ");
+            string fName = Console.ReadLine();
+            //if first name pattern is match
+            if (Regex.IsMatch(fName, fNamePattern))
+            {
+                Console.WriteLine("First name of the user is : Valid");
+            }
+            //if first name pattern is not match
+            else
+            {
+                Console.WriteLine("First name of the user is : Invalid");
+            }
         }
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     }

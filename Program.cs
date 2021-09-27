@@ -10,9 +10,7 @@ namespace REGEXRegularExpressionsAndPattern
             Console.WriteLine("Welcome to REGEX Regular Expressions & Pattern");
             Console.WriteLine("-----------------------------------------------------------------");
             Console.WriteLine("\n***************************************************************************\n");
-            Console.Write("Enter the Frist-Name : ");
-            string fName = Console.ReadLine();
-            Console.WriteLine("First name of the user is : " + ToCheckRegexPattern.validName(fName));
+            ToCheckRegexPattern.validName();
             Console.WriteLine("\n***************************************************************************\n");
             Console.Write("Enter the Last-Name : ");
             string lName = Console.ReadLine();
