@@ -16,6 +16,7 @@ namespace REGEXRegularExpressionsAndPattern
             ToCheckRegexPattern.validEmailID();
             ToCheckRegexPattern.validMobileNumber();
             toCheckRegexPattern.validPassword();
+            ToCheckRegexPattern.ValidateEmailAllRules();
             Console.WriteLine("\n***************************************************************************\n");
         }
     }

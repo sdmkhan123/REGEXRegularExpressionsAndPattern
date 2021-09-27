@@ -153,5 +153,20 @@ namespace REGEXRegularExpressionsAndPattern
             }
             return num;
         }
+        public static void ValidateEmailAllRules()
+        {
+            Console.WriteLine("\n***************************************************************************\n");
+            Console.Write("Enter the Email Id of user : ");
+            string emailId = Console.ReadLine();
+            string emailIdPattern = "^[a-z]+[-.+]?([0-9]+)?([a-z]|[0-9])+[@]([0-9]+)?([a-z]+)?[.][a-z]{2,3}([.][a-z]+)?$";
+            if (Regex.IsMatch(emailId, emailIdPattern))
+            {
+                Console.WriteLine("Email Id of user is : valid");
+            }
+            else
+            {
+                Console.WriteLine("Email Id of user is : invalid");
+            }
+        }
     }
 }
