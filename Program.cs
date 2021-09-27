@@ -6,6 +6,7 @@ namespace REGEXRegularExpressionsAndPattern
     {
         static void Main(string[] args)
         {
+            ToCheckRegexPattern toCheckRegexPattern = new ToCheckRegexPattern();
             Console.WriteLine("-----------------------------------------------------------------");
             Console.WriteLine("Welcome to REGEX Regular Expressions & Pattern");
             Console.WriteLine("-----------------------------------------------------------------");
@@ -14,7 +15,7 @@ namespace REGEXRegularExpressionsAndPattern
             ToCheckRegexPattern.validLastName();
             ToCheckRegexPattern.validEmailID();
             ToCheckRegexPattern.validMobileNumber();
-            ToCheckRegexPattern.validPassword();
+            toCheckRegexPattern.validPassword();
             Console.WriteLine("\n***************************************************************************\n");
         }
     }

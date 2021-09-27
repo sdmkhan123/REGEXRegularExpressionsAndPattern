@@ -75,30 +75,65 @@ namespace REGEXRegularExpressionsAndPattern
             string mobileNumber = Console.ReadLine();
             if (Regex.IsMatch(mobileNumber, mobileNumberdPattern))
             {
-                Console.WriteLine("Mobile Number of the user is : Valid");
+                Console.WriteLine("Mobile Nubmber of the user is : Valid");
             }
             else
             {
-                Console.WriteLine("Mobile Number of the user is : Invalid");
+                Console.WriteLine("Mobile Nummber of the user is : Invalid");
             }
         }
         /// <summary>
         /// Function to check Password is valid or not
         /// </summary>
-        public static void validPassword()
+        public void validPassword()
         {
-            Console.WriteLine("\n***************************************************************************\n");
-            string passwordPattern = @"^[A-Z]{1,}[0-9]{1,}[A-Za-z]{6,}$";
             Console.Write("Enter the Password : ");
             string password = Console.ReadLine();
-            if (Regex.IsMatch(password, passwordPattern))
+            string passpattern = @"^[0-9a-zA-Z]{8,}$";
+            Regex reg = new Regex(passpattern);
+            if (password.Length >= 8 && toCheckNumOfUpperCase(password) >= 1 && ToCheckNumeric(password) >= 1)
             {
                 Console.WriteLine("Password of the user is : Valid");
             }
             else
             {
+
                 Console.WriteLine("Password of the user is : Invalid");
             }
+        }
+        /// <summary>
+        /// To chech Upper case char atleast one
+        /// </summary>
+        /// <param name="pass"></param>
+        /// <returns></returns>
+        private int toCheckNumOfUpperCase(string pass)
+        {
+            int num = 0;
+            foreach (char ch in pass)
+            {
+                if (char.IsUpper(ch))
+                {
+                    num++;
+                }
+            }
+            return num;
+        }
+        /// <summary>
+        /// To chech atleast one Numeric value
+        /// </summary>
+        /// <param name="pass"></param>
+        /// <returns></returns>
+        private int ToCheckNumeric(string pass)
+        {
+            int num = 0;
+            foreach (char ch in pass)
+            {
+                if (char.IsDigit(ch))
+                {
+                    num++;
+                }
+            }
+            return num;
         }
     }
 }
