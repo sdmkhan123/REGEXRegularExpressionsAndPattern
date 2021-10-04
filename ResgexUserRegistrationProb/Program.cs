@@ -34,6 +34,11 @@ namespace REGEXRegularExpressionsAndPattern
             string allEmailId = Console.ReadLine();
             ToCheckRegexPattern.ValidateEmailAllRules(allEmailId);
             Console.WriteLine("\n***************************************************************************\n");
+            Console.WriteLine("===================================================================================================");
+            Console.WriteLine(">>>>>>>>>>>>>>>Welcome to User Registration with the help of Lambda Function<<<<<<<<<<<<<<<");
+            Console.WriteLine("===================================================================================================");
+            LambdaFunction.lambdaValidateFun();
+            Console.WriteLine("\n***************************************************************************\n");
         }
     }
 }
